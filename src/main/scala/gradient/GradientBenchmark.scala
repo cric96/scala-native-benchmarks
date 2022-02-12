@@ -1,12 +1,12 @@
-package staticField
+package gradient
 
 import it.unibo.scafi.incarnations.BasicSimulationIncarnation._
 import it.unibo.scafi.config.GridSettings
 
-object StaticFieldBenchmark extends communitybench.Benchmark {
+object GradientBenchmark extends communitybench.Benchmark {
 
-    class StaticFieldCheck extends AggregateProgram {
-        override def main = 10
+    class GradientCheck extends AggregateProgram with StandardSensors with BlockG with Gradients {
+        override def main() = classicGradient(mid() == 0, nbrRange)
     }
 
     def run(input: String): Unit = {
@@ -14,7 +14,7 @@ object StaticFieldBenchmark extends communitybench.Benchmark {
         val range = 2
         val ticks = 10000
         val simulator = simulatorFactory.gridLike(GridSettings(howMany, howMany, range, range),range)
-        (0 to ticks) foreach { _ => simulator.exec(new StaticFieldCheck) }
+        (0 to ticks) foreach { _ => simulator.exec(new GradientCheck) }
     }
 
     override def main(args: Array[String]): Unit = super.main(args)

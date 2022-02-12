@@ -9,8 +9,8 @@ confs_path    = base_path + '/confs'
 binaries_path = base_path + '/binaries'
 results_path  = base_path + '/results'
 
-default_batches = 2000
-default_runs = 20
+default_batches = 500
+default_runs = 5
 
 class Configuration:
 

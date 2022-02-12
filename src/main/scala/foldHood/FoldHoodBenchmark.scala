@@ -1,12 +1,12 @@
-package staticField
+package foldHood
 
 import it.unibo.scafi.incarnations.BasicSimulationIncarnation._
 import it.unibo.scafi.config.GridSettings
 
-object StaticFieldBenchmark extends communitybench.Benchmark {
+object FoldHoodBenchmark extends communitybench.Benchmark {
 
-    class StaticFieldCheck extends AggregateProgram {
-        override def main = 10
+    class FoldhoodCheck extends AggregateProgram {
+        override def main() = foldhood(0)(_ + _)(1)
     }
 
     def run(input: String): Unit = {
@@ -14,7 +14,7 @@ object StaticFieldBenchmark extends communitybench.Benchmark {
         val range = 2
         val ticks = 10000
         val simulator = simulatorFactory.gridLike(GridSettings(howMany, howMany, range, range),range)
-        (0 to ticks) foreach { _ => simulator.exec(new StaticFieldCheck) }
+        (0 to ticks) foreach { _ => simulator.exec(new FoldhoodCheck) }
     }
 
     override def main(args: Array[String]): Unit = super.main(args)

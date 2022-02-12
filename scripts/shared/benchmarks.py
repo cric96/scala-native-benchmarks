@@ -7,23 +7,19 @@ import sys
 
 benchmarks = [
     'staticField.StaticFieldBenchmark',
-    'bounce.BounceBenchmark',
-    'list.ListBenchmark',
-    'queens.QueensBenchmark',
-    'richards.RichardsBenchmark',
-    'permute.PermuteBenchmark',
-    'deltablue.DeltaBlueBenchmark',
-    'tracer.TracerBenchmark',
-    'json.JsonBenchmark',
-    'sudoku.SudokuBenchmark',
-    'brainfuck.BrainfuckBenchmark',
-    'cd.CDBenchmark',
-    'kmeans.KmeansBenchmark',
-    'nbody.NbodyBenchmark',
-    'rsc.RscBenchmark',
-    'gcbench.GCBenchBenchmark',
-    'mandelbrot.MandelbrotBenchmark',
-    'histogram.Histogram'
+    'rep.RepBenchmark',
+    'foldHood.FoldHoodBenchmark',
+    'foldHoodAndNbr.FoldHoodAndNbrBenchmark',
+    'g.GBenchmark',
+    'gradient.GradientBenchmark',
+    'c.CBenchmark',
+    't.TBenchmark',
+    's.SBenchmark',
+    'buildingBlocksBundle.BuildingBlocksBundleBenchmark',
+    'channel.ChannelBenchmark',
+    'scrPattern.SCRPatternBenchmark',
+    'fewProcess.FewProcessBenchmark',
+    'manyProcess.ManyProcessBenchmark',
 ]
 
 
