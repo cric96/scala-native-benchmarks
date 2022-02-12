@@ -6,6 +6,7 @@ import subprocess
 import sys
 
 benchmarks = [
+    'staticField.StaticFieldBenchmark',
     'bounce.BounceBenchmark',
     'list.ListBenchmark',
     'queens.QueensBenchmark',
