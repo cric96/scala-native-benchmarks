@@ -1,5 +1,5 @@
-stable = 'scala-native-0.4.3-2.12'
-latest = 'scala-native-0.4.3-2.12'
+stable = 'jvm'
+latest = 'jvm'
 
 def expand_all(arg):
     confs = []
